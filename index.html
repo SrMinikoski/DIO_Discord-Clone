@@ -7,28 +7,29 @@
     <title>DIO - Discord Clone</title>
     <meta name="scroll-restoration" content="auto">
     <link rel="stylesheet" href="Assets/CSS/style.css">
+
 </head>
 
 <body>
     <header>
-        <article id="headerArticle">
+        <article id="headerArticle" class="scroll-hidden">
             <h1>IMAGINE UM LUGAR...</h1>
             <p>…onde você possa pertencer a um clube escolar, um grupo de gamers, ou uma comunidade artística mundial.
                 Onde
                 você e alguns amigos possam passar um tempo juntos. Um lugar que torna fácil conversar todos os dias e
                 socializar com mais frequência.</p>
-            <section class="botoes">
+            <section class="botoes" scroll-hidden>
                 <a href="" id="baixar">Baixar para Windows</a>
                 <a href="" id="navegador">Abra o Discord no seu navegador</a>
             </section><!--Botoes section-->
         </article>
     </header>
     <main>
-        <article id="article01">
+        <article id="article01" class="scroll-hidden">
             <figure>
                 <img src="Assets/article01.png" alt="Chat do Discord com uma conversa sobre estudos">
             </figure>
-            <div class="texto">
+            <div class="texto scroll-hidden">
                 <h2>
                     Crie um espaço controlado por convite onde você se sinta em casa
                 </h2>
@@ -39,11 +40,11 @@
             </div><!--Texto div-->
         </article><!--Article 01-->
 
-        <article id="article02">
+        <article id="article02" class="scroll-hidden">
             <figure>
                 <img src="Assets/article02.png" alt="Chat do Discord com uma conversa sobre estudos">
             </figure>
-            <div class="texto">
+            <div class="texto scroll-hidden">
                 <h2>
                     Aqui é fácil se encontrar
                 </h2>
@@ -55,11 +56,11 @@
             </div><!--Texto div-->
         </article><!--Article 02-->
 
-        <article id="article03">
+        <article id="article03" class="scroll-hidden">
             <figure>
                 <img src="Assets/article03.png" alt="Chat do Discord com uma conversa sobre estudos">
             </figure>
-            <div class="texto">
+            <div class="texto scroll-hidden">
                 <h2>
                     Para poucos e para muitos
                 </h2>
@@ -70,11 +71,11 @@
             </div><!--Texto div-->
         </article><!--Article 03-->
 
-        <article id="article04">
+        <article id="article04" class="scroll-hidden">
             <figure>
                 <img src="Assets/article04.png" alt="Chat do Discord com uma conversa sobre estudos">
             </figure>
-            <div class="texto">
+            <div class="texto scroll-hidden">
                 <h2>
                     TECNOLOGIA DE CONEXÃO CONFIÁVEL
                 </h2>
@@ -86,7 +87,7 @@
             </div><!--Texto div-->
         </article><!--Article 04-->
     </main>
-    <footer>
+    <footer class="scroll-hidden">
         <figure>
             <img src="Assets/Logo.png" alt="Logo do Discord">
         </figure>
@@ -95,3 +96,18 @@
 
 </html>
 <!-- Link do design em que o projeto foi baseado: https://www.figma.com/design/NRBYrG5d4DSzObv7dpTqoM/Desafio-Responsividade---DIO?node-id=0-1&p=f&t=DXQr7iA3ll6J0fil-0 -->
+
+<script>
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('scroll-show');
+                entry.target.classList.remove('scroll-hidden');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    document.querySelectorAll('.scroll-hidden').forEach(el => observer.observe(el));
+</script>
