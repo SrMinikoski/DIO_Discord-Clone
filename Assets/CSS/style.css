@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    width: 80vw;
+    background-color: lightgray;
+    margin: 10px auto;
+    padding: 20px;
+    gap: 30px;
+}
+
+main img {
+    width: 100%;
+    height: auto;
+}
+
+main figure {
+    padding: 0px;
+    margin: 0px;
+    width: 38vw;
+    text-align: center;
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    background-color: thistle;
+    justify-content: center;
+}
+
+#article02 {
+    flex-direction: row-reverse;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 21vw;
+}
+.texto h2{
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+#article04 {
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+#article04 .texto {
+    width: 55vw;
+    text-align: center !important;
+    align-items: center;
+    
+}
+#article04 .texto h2{
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+}
